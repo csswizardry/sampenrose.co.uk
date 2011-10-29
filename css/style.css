@@ -120,7 +120,8 @@ a,
 	background:-ms-linear-gradient(top, #19add6 0%,#1382ab 100%); /* IE10+ */
 	background:linear-gradient(top, #19add6 0%,#1382ab 100%); /* W3C */
 }
-.btn{
+.btn,
+.promo{
 	border:1px solid #1382ab;
 }
 h1,h2,h3,h4,h5,h6,
@@ -128,7 +129,8 @@ figure,
 .btn{
 	font:0.75em/2 "Helvetica Neue", Arial, sans-serif;
 }
-.btn{
+.btn,
+.promo{
 	text-shadow:1px 1px 1px rgba(0,0,0,0.5);
 }
 .btn,
