@@ -97,9 +97,7 @@ textarea{
 \*------------------------------------*/
 h1,
 a,
-.source,
-blockquote p:before,
-blockquote p:after{
+.source{
 	color:#1382ab;
 }
 .btn,
@@ -201,7 +199,7 @@ html{
 	overflow-y:scroll;
 	line-height:1.5; /* A safe and comfortable default for body copy at any size. */
 	background-color:#fff;
-	color:#333;
+	color:#666;
 }
 body{
 	max-width:640px;
@@ -402,18 +400,28 @@ blockquote p:after{ content: ""; content: no-close-quote; }
 blockquote p:last-of-type:after{ content: "”"; content: close-quote; }
 
 blockquote{
+	font-size:18px;
+	font-size:1.125rem;
+	line-height:1.333;
+	font-style:italic;
 	text-indent:-0.4em;
 	margin-right:10%;
 	margin-left:10%;
 }
 .source{
+	font-weight:400;
 	display:block;
-	text-indent:0;
+	text-indent:1em;
 	margin-top:-24px;
 	margin-top:-1.5rem;
 }
-.source:before{
-	content:"—";
+/* Move company name onto new line */
+.source small{
+	display:block;
+}
+blockquote,
+.source small{
+	color:#999;
 }
 mark{
 	background-color:#ff8;
@@ -614,6 +622,24 @@ img{
 \*------------------------------------*/
 table{
 	width:100%;
+}
+
+
+
+
+
+/*------------------------------------*\
+	$RESPONSIVE
+\*------------------------------------*/
+@media(min-width: 480px){
+h1,h2,h3,h4,h5,h6,
+blockquote{
+	font-family:chaparral-pro-1,chaparral-pro-2,"Chaparral Pro",Georgia,sans-serif;
+	font-weight:700;
+}
+blockquote{
+	font-weight:400;
+}
 }
 
 
