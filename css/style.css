@@ -332,10 +332,16 @@ body{
 }
 
 .main-nav a{
-	padding:0 3%;
-	text-decoration:underline;
+	margin-left:6%;
+	border-bottom:2px solid rgba(0,0,0,0.25);
 	color:#666;
 }
+	.main-nav li:first-child a{
+		margin-left:0;
+	}
+	.main-nav a:hover{
+		text-decoration:none;
+	}
 
 
 
