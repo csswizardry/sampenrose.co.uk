@@ -1,9 +1,11 @@
 TEAM
 
-	Harry Roberts -- Designer/developer -- @csswizardry
+	Harry Roberts -- Developer -- @csswizardry
+	Sam Penrose   -- Designer  -- @sam_penrose
 
 
 SITE
 
 	HTML
 	CSS
+	Typekit

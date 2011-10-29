@@ -96,7 +96,10 @@ textarea{
 	$SHARED
 \*------------------------------------*/
 h1,
-a{
+a,
+.source,
+blockquote p:before,
+blockquote p:after{
 	color:#1382ab;
 }
 .btn,
@@ -400,12 +403,14 @@ blockquote p:last-of-type:after{ content: "”"; content: close-quote; }
 
 blockquote{
 	text-indent:-0.4em;
+	margin-right:10%;
+	margin-left:10%;
 }
 .source{
 	display:block;
 	text-indent:0;
-	margin-top:-Xpx;
-	margin-top:-Xrem;
+	margin-top:-24px;
+	margin-top:-1.5rem;
 }
 .source:before{
 	content:"—";
