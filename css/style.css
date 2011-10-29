@@ -165,6 +165,10 @@ textarea:focus{
 	cursor:text;
 }
 
+.social a{
+	background-image:url(../img/css/sprites/main.png);
+}
+
 
 
 
@@ -176,14 +180,22 @@ textarea:focus{
 Big up @necolas: http://nicolasgallagher.com/micro-clearfix-hack/
 */
 .cf:before,
-.cf:after{
+.cf:after,
+.carousel:before,
+.carousel:after,
+.wrapper:before,
+.wrapper:after{
 	content:"";
 	display:table;
 }
-.cf:after{
+.cf:after,
+.carousel:after,
+.wrapper:after{
 	clear:both;
 }
-.cf{
+.cf,
+.carousel,
+.wrapper{
 	zoom:1;
 }
 
@@ -382,6 +394,23 @@ li > ol{
 	margin-bottom:0;
 }
 
+.keywords{
+	list-style:none;
+	margin-left:0;
+}
+
+.keywords li{
+	display:inline;
+}
+
+.keywords li:after{
+	content:",";
+}
+
+.keywords li:last-child:after{
+	content:"";
+}
+
 /*--- QUOTES ---*/
 /*
 Big up @boblet: http://html5doctor.com/blockquote-q-cite/
@@ -575,6 +604,34 @@ figcaption{
 
 
 /*------------------------------------*\
+	$SOCIAL
+\*------------------------------------*/
+.social{
+	display:inline-block;
+}
+.social a{
+	margin-bottom:3px;
+	width:48px;
+	height:48px;
+	text-indent:-99999px;
+	
+	-moz-transition:0.2s opacity linear;
+	-webkit-transition:0.2s opacity linear;
+	transition:0.2s opacity linear;
+}
+	.social:hover a{
+		opacity:0.5;
+	}
+	.social a:hover{
+		opacity:1;
+	}
+.facebook a	{ background-position:-48px 0; }
+.dribbble a	{ background-position:-96px 0; }
+
+
+
+
+/*------------------------------------*\
 	$RIBBON
 \*------------------------------------*/
 .ribbon{
@@ -632,6 +689,19 @@ table{
 	$RESPONSIVE
 \*------------------------------------*/
 @media(min-width: 481px){
+body{
+	max-width:960px;
+}
+.content,
+.sub-content{
+	float:left;
+	width:61.666%;
+	margin-right:5%;
+}
+.sub-content{
+	margin-right:0;
+	width:33.333%;
+}
 h1,h2,h3,h4,h5,h6,
 blockquote{
 	font-family:chaparral-pro-1,chaparral-pro-2,"Chaparral Pro",Georgia,sans-serif;
