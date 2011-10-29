@@ -325,15 +325,17 @@ body{
 	display:inline-block;
 }
 .main-nav{
+	font-size:18px;
+	font-size:1.25rem;
+	line-height:1.2;
 	text-align:center;
 }
-	.main-nav li:before{
-		content:"| ";
-		color:#ccc;
-	}
-	.main-nav li:first-child:before{
-		content:"";
-	}
+
+.main-nav a{
+	padding:0 3%;
+	text-decoration:underline;
+	color:#666;
+}
 
 
 
@@ -738,11 +740,13 @@ body{
 	width:33.333%;
 }
 h1,h2,h3,h4,h5,h6,
-blockquote{
+blockquote,
+.main-nav{
 	font-family:chaparral-pro-1,chaparral-pro-2,"Chaparral Pro",Georgia,sans-serif;
 	font-weight:700;
 }
-blockquote{
+blockquote,
+.main-nav{
 	font-weight:400;
 }
 }
