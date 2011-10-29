@@ -210,8 +210,8 @@ html{
 	font-family:Georgia, serif;
 	overflow-y:scroll;
 	line-height:1.5; /* A safe and comfortable default for body copy at any size. */
-	background-color:#fff;
 	color:#666;
+	background:url(../img/css/page/bg.png) #fff;
 }
 body{
 	max-width:640px;
@@ -334,8 +334,15 @@ body{
 \*------------------------------------*/
 .footer{
 	color:#fff;
-	background-color:#333;
+	background:url(../img/css/footer/bg.png) 102% 120%  no-repeat #333;
+	
+	-moz-transition:0.1s background-position linear;
+	-webkit-transition:0.1s background-position linear;
+	transition:0.1s background-position linear;
 }
+	.footer:hover{
+		background-position:right bottom;
+	}
 	.footer > :last-child{
 		margin-bottom:0;
 	}
