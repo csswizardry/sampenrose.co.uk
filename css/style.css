@@ -104,7 +104,8 @@ textarea{
 \*------------------------------------*/
 h1,
 a,
-.source{
+.source,
+.main-nav .current a{
 	color:#1382ab;
 }
 .btn,
@@ -337,6 +338,10 @@ body{
 	margin-left:6%;
 	border-bottom:2px solid rgba(0,0,0,0.25);
 	color:#666;
+	
+	-moz-transition:0.2s border-color linear;
+	-webkit-transition:0.2s border-color linear;
+	transition:0.2s border-color linear;
 }
 	.main-nav li:first-child a{
 		margin-left:0;
@@ -344,6 +349,10 @@ body{
 	.main-nav a:hover{
 		text-decoration:none;
 	}
+.main-nav a:hover,
+.main-nav .current a{
+	border-color:#1382ab;
+}
 
 
 
@@ -785,3 +794,7 @@ hr{
 	.btn:hover{
 		text-decoration:none;
 	}
+.current a{
+	cursor:text;
+	outline:none;
+}
