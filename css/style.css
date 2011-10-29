@@ -11,6 +11,7 @@ LOGO
 NAV
 FOOTER
 TYPE
+PROMOS
 FIGURES
 CAROUSEL
 SOCIAL
@@ -107,6 +108,7 @@ a,
 	color:#1382ab;
 }
 .btn,
+.promo,
 .panel-copy,
 .ribbon{
 	color:#fff;
@@ -131,6 +133,7 @@ figure,
 }
 .btn,
 figure,
+.promo,
 .carousel,
 .ribbon{
 	-moz-border-radius:2px;
@@ -146,6 +149,7 @@ form,
 figure,
 pre,
 hr,
+.promo,
 .source,
 .logo,
 .carousel{
@@ -467,6 +471,24 @@ blockquote,
 }
 mark{
 	background-color:#ff8;
+}
+
+
+
+
+
+/*------------------------------------*\
+	$PROMOS
+\*------------------------------------*/
+.promo{
+	display:block;
+	padding:1.5em;
+}
+.promo:hover{
+	text-decoration:none;
+}
+.promo:hover .go{
+	text-decoration:underline;
 }
 
 
