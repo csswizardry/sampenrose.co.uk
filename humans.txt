@@ -1,7 +1,7 @@
 TEAM
 
-	Harry Roberts -- Developer -- @csswizardry
 	Sam Penrose   -- Designer  -- @sam_penrose
+	Harry Roberts -- Developer -- @csswizardry
 
 
 SITE

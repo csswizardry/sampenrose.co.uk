@@ -125,6 +125,12 @@ a,
 .promo{
 	border:1px solid #1382ab;
 }
+.ribbon,
+a.promo:hover{
+	-moz-box-shadow:3px 3px 0 rgba(0,0,0,0.1);
+	-webkit-box-shadow:3px 3px 0 rgba(0,0,0,0.1);
+	box-shadow:3px 3px 0 rgba(0,0,0,0.1);
+}
 h1,h2,h3,h4,h5,h6,
 figure,
 .btn{
@@ -153,6 +159,7 @@ figure,
 pre,
 hr,
 dd,
+.media,
 .promo,
 .source,
 .logo,
@@ -225,7 +232,9 @@ html{
 	overflow-y:scroll;
 	line-height:1.5; /* A safe and comfortable default for body copy at any size. */
 	color:#666;
-	background:url(../img/css/page/bg.png) #fff;
+	background-image:url(../img/css/page/bg.png);
+	background-attachment:fixed;
+	background-color:#ddd; /* Change this colour here to alter the page's stippled effect. */
 }
 body{
 	max-width:640px;
@@ -364,7 +373,7 @@ body{
 \*------------------------------------*/
 .footer{
 	color:#fff;
-	background:url(../img/css/footer/bg.png) 102% 120%  no-repeat #333;
+	background:url(../img/css/footer/bg.png) 110% top  no-repeat #333;
 	
 	-moz-transition:0.1s background-position linear;
 	-webkit-transition:0.1s background-position linear;
@@ -501,6 +510,36 @@ blockquote,
 mark{
 	background-color:#ff8;
 }
+
+
+
+
+
+/*------------------------------------*\
+	$MEDIA
+\*------------------------------------*/
+/*
+Based on @stubbornella’s media object: www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/
+<a class="media promo">
+	<img src=product.jpg alt="" class=img>
+	<p class=body>Get Product for half price!</p>
+</a>
+*/
+.media{
+	display:block;
+	overflow:hidden;
+}
+	.media .img{
+		float:left;
+		margin-right:24px;
+	}
+	.media .body{
+		overflow:hidden;
+		margin-bottom:0;
+	}
+		.media .body > :last-child{
+			margin-bottom:0;
+		}
 
 
 
@@ -706,9 +745,6 @@ figcaption{
 	-moz-border-radius:2px 2px 2px 0;
 	-webkit-border-radius:2px 2px 2px 0;
 	border-radius:2px 2px 2px 0;
-	-moz-box-shadow:3px 3px 0 rgba(0,0,0,0.1);
-	-webkit-box-shadow:3px 3px 0 rgba(0,0,0,0.1);
-	box-shadow:3px 3px 0 rgba(0,0,0,0.1);
 }
 .ribbon:before{
 	content:"";
