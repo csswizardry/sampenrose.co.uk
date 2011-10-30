@@ -152,6 +152,7 @@ form,
 figure,
 pre,
 hr,
+dd,
 .promo,
 .source,
 .logo,
@@ -445,6 +446,15 @@ li > ol{
 
 .keywords li:last-child:after{
 	content:"";
+}
+
+dt{
+	font-size:24px;
+	font-size:1.5rem;
+	line-height:1;
+}
+dt:after{
+	content:":";
 }
 
 /*--- QUOTES ---*/
@@ -762,6 +772,7 @@ body{
 	}
 h1,h2,h3,h4,h5,h6,
 blockquote,
+dt,
 .main-nav{
 	font-family:chaparral-pro-1,chaparral-pro-2,"Chaparral Pro",Georgia,sans-serif;
 	font-weight:700;
