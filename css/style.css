@@ -523,19 +523,16 @@ Based on @stubbornella’s media object: www.stubbornella.org/content/2010/06/25
 <a class="media promo">
 	<img src=product.jpg alt="" class=img>
 	<p class=body>Get Product for half price!</p>
-</a>
+</a>	
 */
 .media{
 	display:block;
-	overflow:hidden;
+	-moz-hyphens:auto;
+	-webkit-hyphens:auto;
+	hyphens:auto;
 }
 	.media .img{
-		float:left;
-		margin-right:24px;
-	}
-	.media .body{
-		overflow:hidden;
-		margin-bottom:0;
+		max-width:300px;
 	}
 		.media .body > :last-child{
 			margin-bottom:0;
@@ -607,9 +604,9 @@ figcaption{
     width:500%; /* Number of panes * 100% */
     overflow:hidden; /* This is used solely to clear floats, it does not add functionality. */
      
-    -moz-animation:carousel 100s linear infinite;
-    -webkit-animation:carousel 100s linear infinite;
-	animation:carousel 100s linear infinite;
+    -moz-animation:carousel 60s linear infinite;
+    -webkit-animation:carousel 60s linear infinite;
+	animation:carousel 60s linear infinite;
 }
 	/*.panes:hover{
 		-moz-animation-play-state:paused;
@@ -790,7 +787,7 @@ table{
 \*------------------------------------*/
 @media(min-width: 481px){
 body{
-	max-width:960px;
+	max-width:1200px;
 }
 .content,
 .sub-content{
@@ -817,6 +814,18 @@ blockquote,
 .main-nav{
 	font-weight:400;
 }
+.media{
+	overflow:hidden;
+}
+	.media .img{
+		float:left;
+		width:50%;
+		margin-right:24px;
+	}
+	.media .body{
+		overflow:hidden;
+		margin-bottom:0;
+	}
 }
 
 
