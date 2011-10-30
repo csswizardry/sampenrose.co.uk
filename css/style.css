@@ -827,6 +827,19 @@ blockquote,
 		margin-bottom:0;
 	}
 }
+@media(max-width: 480px){
+.carousel{
+	-moz-hyphens:auto;
+	-webkit-hyphens:auto;
+	hyphens:auto;
+}
+.carousel p,
+.carousel hr,
+.mob-accessibility{
+	position:absolute;
+	left:-99999px;
+}
+}
 
 
 
