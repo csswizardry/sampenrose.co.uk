@@ -1,0 +1,15 @@
+RewriteEngine On
+
+# 1) ensure we don't redirect on localhost, e.g. we need a vhost
+# 2) apache's sub request stuff seems knackered so we have to inspect the request to avoid an infinite loop with the 2nd rule below
+# 3) if all looks good, redirect sans .html
+RewriteCond %{HTTP_HOST} !localhost
+RewriteCond %{THE_REQUEST} ^.*\.html.*$
+RewriteRule ^(.+)\.html$ /$1 [R=301,L]
+
+# 1) same localhost check
+# 2) if the filename doesn't exist, e.g. would 404 (avoids re-writing assets which exist)
+# 3) Rewrite internally to the .html equivalent
+RewriteCond %{HTTP_HOST} !localhost
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.+)$ /$1.html [L]
