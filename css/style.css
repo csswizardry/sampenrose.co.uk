@@ -531,9 +531,6 @@ Based on @stubbornella’s media object: www.stubbornella.org/content/2010/06/25
 	-webkit-hyphens:auto;
 	hyphens:auto;
 }
-	.media .img{
-		max-width:300px;
-	}
 		.media .body > :last-child{
 			margin-bottom:0;
 		}
@@ -820,6 +817,7 @@ blockquote,
 	.media .img{
 		float:left;
 		width:50%;
+		max-width:300px;
 		margin-right:24px;
 	}
 	.media .body{
