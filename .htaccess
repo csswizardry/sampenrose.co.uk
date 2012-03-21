@@ -1,4 +1,7 @@
 RewriteEngine On
+RewriteCond %{HTTP_HOST} ^www\.sampenrose\.co.uk$ [NC]
+RewriteRule ^(.*)$ http://sampenrose.co.uk/$1 [R=301,L]
+
 
 # 1) ensure we don't redirect on localhost, e.g. we need a vhost
 # 2) apache's sub request stuff seems knackered so we have to inspect the request to avoid an infinite loop with the 2nd rule below
